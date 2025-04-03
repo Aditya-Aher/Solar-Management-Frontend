@@ -1,0 +1,18 @@
+{
+  "visitors": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "status": "Active",
+      "consumer_id": "C001",
+      "consumer_status": "Approved"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "status": "Pending",
+      "consumer_id": "C002",
+      "consumer_status": "In Review"
+    }
+  ]
+}

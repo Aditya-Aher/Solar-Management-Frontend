@@ -1,0 +1,36 @@
+<div class="container mt-4">
+  <h2>Solar Panel</h2>
+  <div class="mb-3">
+    <a routerLink="/add-visitor" class="btn btn-primary">Add New Visitor</a>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>consumerName</th>
+        <th>consumerNumber</th>
+        <th>subcdStatus</th>
+        <th>installationStatus</th>
+        <th>reasonNotDone</th>
+        <th>address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let visitor of visitors">
+        <td>{{ visitor.id }}</td>
+        <td>{{ visitor.consumerName }}</td>
+        <td>{{ visitor.consumerNumber }}</td>
+        <td>{{ visitor.subcdStatus }}</td>
+        <td>{{ visitor.installationStatus }}</td>
+        <td>{{ visitor.reasonNotDone }}</td>
+        <td>{{ visitor.address }}</td>
+        <td>
+          <td>
+            <button class="btn btn-info btn-sm me-2" [routerLink]="['/view-visitor', visitor.id]">View</button>
+            <button class="btn btn-warning btn-sm me-2" [routerLink]="['/edit-visitor', visitor.id]">Edit</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteVisitor(visitor.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
